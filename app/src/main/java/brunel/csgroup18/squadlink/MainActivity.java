@@ -174,10 +174,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             break;
             case(R.id.nav_profile):{
-                ProfileFragment profileFragment = new ProfileFragment();
-                ft.replace(R.id.fragment_container, profileFragment);
-                ft.commit();
-                mToolbar.setTitle("My Profile");
+                Intent a=new Intent(this,ProfileActivity.class);
+                startActivity(a);
             }
             break;
             case(R.id.nav_events_finder):{
