@@ -10,5 +10,6 @@
         <item>Player</item>
         <item>Coach</item>
     </string-array>
+    <string name="title_activity_view_ctp">The Plan</string>
 
 </resources>

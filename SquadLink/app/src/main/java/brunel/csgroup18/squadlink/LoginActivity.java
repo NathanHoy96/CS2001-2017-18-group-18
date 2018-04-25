@@ -59,10 +59,19 @@ public class LoginActivity extends AppCompatActivity {
                         try {
 
                             Log.i("JSON",response);
-                            JSONObject jsonResponse = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
 
-                            boolean success = jsonResponse.getBoolean("success");
-                            Log.i("Success",jsonResponse.toString());
+                            boolean success;
+                            JSONObject jsonResponse = null;
+
+                            if(response.isEmpty()){
+                                success = false;
+                            }
+                            else {
+                                jsonResponse = new JSONObject(response.substring(response.indexOf("{"), response.lastIndexOf("}") + 1));
+
+                                success = jsonResponse.getBoolean("success");
+                                Log.i("Success", jsonResponse.toString());
+                            }
 
                             if(success){
 
@@ -77,12 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                                 finish();
                             }
                             else{
-                                Log.i("Login","Fail");
-                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                builder.setMessage("Login Failed")
-                                        .setNegativeButton("Retry", null)
-                                        .create()
-                                        .show();
+                                createLoginFailureDialog();
                             }
 
                         } catch (JSONException e) {
@@ -110,4 +114,14 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+    private void createLoginFailureDialog(){
+        Log.i("Login","Fail");
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        builder.setMessage("Login Failed")
+                .setNegativeButton("Retry", null)
+                .create()
+                .show();
+    }
+
 }

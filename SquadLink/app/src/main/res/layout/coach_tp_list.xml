@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/relative_layout_background">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tp_title"
+        android:text="Test"
+        android:textSize="30sp"
+        android:paddingLeft="20dp"/>
+
+</RelativeLayout>
