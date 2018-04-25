@@ -168,10 +168,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             break;
             case(R.id.nav_nutrition_plans):{
-                NutritionPlansFragment nutritionFragment = new NutritionPlansFragment();
-                ft.replace(R.id.fragment_container, nutritionFragment);
-                ft.commit();
-                mToolbar.setTitle("Nutrition Plans");
+                Intent a=new Intent(this, WorkoutActivity.class);
+                startActivity(a);
             }
 
             break;
