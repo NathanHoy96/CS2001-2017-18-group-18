@@ -37,6 +37,31 @@
             android:background="@color/colorAccent"
             android:text="ADD" />
 
-        
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button2"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2"
+            android:layout_marginBottom="18dp"
+            android:text="                " />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="                " />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/textView6"
+            android:layout_below="@+id/textView8"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
