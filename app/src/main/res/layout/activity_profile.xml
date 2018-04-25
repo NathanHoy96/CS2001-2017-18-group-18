@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context="brunel.csgroup18.squadlink.ProfileActivity">
 
+
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="MY PROFILE"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="28dp"
+            app:srcCompat="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
